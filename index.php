@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -46,21 +46,27 @@ for($g=1;$g<=10;$g++)
 <input type="submit" value="ок">
 </form>
 
-<?php
- if (isset($_GET('q')) !="NULL" )
- {
-     echo $_GET('number')*$_GET('number');
- }
+<br>
 
- else if (isset($_GET('qq'))!=NULL)
+<?php
+ if ($_POST['oper'] =="sq") 
  {
-     echo $_GET('number')*$_GET('number')*$_GET('number');
+     echo $_POST['number']*$_POST['number'];
+ }
+ else if ($_POST['oper'] =="kub")
+ {
+     echo $_POST['number']*$_POST['number']*$_POST['number'];
  }
     
- else if (isset($_GET('qqq')!=NULL))
+ else if ($_POST['oper'] =="sqrt")
  {
      echo "0";
  }
+
+else
+{
+    echo $_POST['number'] . "<br>" . $_POST['oper'];
+}
     
 ?>
 </body>
